@@ -5,7 +5,7 @@
 #include <string>
 // you can use `#include <bits/stdc++.h>` insted
 using namespace std;
-class game_system {
+class gameSystem {
 public:
     void startGame() {
         PrintRules();
@@ -88,7 +88,7 @@ private:
     }
 };
 int main() {
-    game_system gs;
+    gameSystem gs;
     gs.startGame();
     return 0;
 }
