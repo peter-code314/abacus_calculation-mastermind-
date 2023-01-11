@@ -40,11 +40,10 @@ private:
     }
     void PrintRules() {
         puts("                              MASTERMIND");
-        puts("The rules of this game is:\n  1. The computer will randomly create a number.");
-        puts("And every number in this number is different.");
+        puts("The rules of this game is:\n  1. The computer will randomly create a number. And every digit in this number is different.");
         puts("  2. You will guess the number in each round, and the computer will give you two hints.");
         puts("The first number output is the number of numbers and positions guessed correctly");
-        puts(", and the second number output is the number of numbers guessed correctly only.GoodLuck!");
+        puts(", and the second number output is the number of numbers guessed correctly only. GoodLuck!");
     }
     void GetDigit() {
         printf("Please enter the digit of the number that you want to challange in this round of 'MASTERMIND'(3 to 7):");
