@@ -87,3 +87,8 @@ private:
         }
     }
 };
+int main() {
+    game_system gs;
+    gs.startGame();
+    return 0;
+}
