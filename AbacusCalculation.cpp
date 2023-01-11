@@ -1,11 +1,9 @@
-#ifndef ABACUSCALCULATION_H_INCLUDED
-#define ABACUSCALCULATION_H_INCLUDED
-
 #include <iostream>
 #include <algorithm>
 #include <ctime>
 #include <vector>
 #include <string>
+// you can use `#include <bits/stdc++.h>` insted
 using namespace std;
 class game_system {
 public:
@@ -34,27 +32,26 @@ private:
                 }
             }
             if (all == digit)  {
-                printf("Correct!");
+                puts("Correct!");
                 break;
             }
             else printf("%d%c%d\n", all, ' ', half);
         }
     }
     void PrintRules() {
-        printf("                              MASTERMIND\n");
-        printf("The rules of this game is:\n  1. The computer will randomly create a number.");
-        printf("And every number in this number is different.\n");
-        printf("  2. You will guess the number in each round, and the computer will give you two hints.\n");
-        printf("The first number output is the number of numbers and positions guessed correctly");
-        printf(", and the second number output is the number of numbers guessed correctly only.GoodLuck!\n");
+        puts("                              MASTERMIND");
+        puts("The rules of this game is:\n  1. The computer will randomly create a number.");
+        puts("And every number in this number is different.");
+        puts("  2. You will guess the number in each round, and the computer will give you two hints.");
+        puts("The first number output is the number of numbers and positions guessed correctly");
+        puts(", and the second number output is the number of numbers guessed correctly only.GoodLuck!");
     }
     void GetDigit() {
-        printf("Please enter the digit of the number ");
-        printf("that you want to challange in this round of 'MASTERMIND'(3 ¡ª 7):");
+        printf("Please enter the digit of the number that you want to challange in this round of 'MASTERMIND'(3 to 7):");
         while (1) {
             cin >> digit;
             if (digit <= 7 && digit >= 3) break;
-            else printf("\nWrong input, please enter again\n");
+            else puts("\nWrong input, please enter again");
         }
         printf("\n");
     }
@@ -66,7 +63,8 @@ private:
         choice.erase(r, 1);
         choice += '0';
         for (int i = 1; i < digit; ++i) {
-            srand(time(nullptr));
+            // you can uncomment the following line
+            //srand(time(nullptr));
             r = rand() % choice.size();
             ans += choice[r];
             choice.erase(r, 1);
@@ -89,6 +87,3 @@ private:
         }
     }
 };
-
-#endif // ABACUSCALCULATION_H_INCLUDED
-
